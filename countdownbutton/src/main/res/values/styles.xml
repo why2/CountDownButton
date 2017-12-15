@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CountDownButton">
+        <!--倒计时总时间，秒-->
+        <attr name="totalTime" format="integer" />
+        <!--倒计时过程时间后面显示内容-->
+        <attr name="countingText" format="string" />
+        <!--倒计时过程中的字体颜色,view在disable状态下会有一个默认颜色，可能存在需要修改情况-->
+        <!--<attr name="countingColor" format="color|reference" />-->
+        <!--时间之后显示是秒/s-->
+        <attr name="countUnit">
+            <enum name="English" value="0" />
+            <enum name="Chinese" value="1" />
+        </attr>
+    </declare-styleable>
+</resources>
