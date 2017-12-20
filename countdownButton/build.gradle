@@ -35,6 +35,9 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 }
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
 
 //compile 'com.sdbian:countdownButton:1.0'
 //gradlew clean build bintrayUpload -PbintrayUser=BINTRAY_USERNAME -PbintrayKey=BINTRAY_KEY -PdryRun=false
@@ -47,11 +50,12 @@ publish {
     website = 'https://github.com/why2/CountDownButton'//github 仓库地址即可
 }
 
-/*task sourcesJar(type: Jar) {
+task sourcesJar(type: Jar) {
     from android.sourceSets.main.java.srcDirs
     classifier = 'sources'
 }
 task javadoc(type: Javadoc) {
+    options.encoding = "UTF-8"
     source = android.sourceSets.main.java.srcDirs
     classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
 }
@@ -59,7 +63,8 @@ task javadocJar(type: Jar, dependsOn: javadoc) {
     classifier = 'javadoc'
     from javadoc.destinationDir
 }
+
 artifacts {
     archives javadocJar
     archives sourcesJar
-}*/
+}
