@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">countdownbutton</string>
+    <string name="time_unit">秒</string>
+    <string name="after">后</string>
+</resources>
